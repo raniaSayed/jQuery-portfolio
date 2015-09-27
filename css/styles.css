@@ -1,0 +1,82 @@
+body{
+	margin: 0;padding: 0;
+}
+#header{
+	width: 100%;
+	height: 56px;
+	background-color: black;
+}
+#wrapper{
+	width: 1024px;
+	min-height: 500px;
+	margin: 0 auto;
+}
+#menu{
+	width: 1024px;
+	margin: 0 auto;
+	color: white;
+}
+h2{
+	margin:0;
+}
+#Portfolio{
+	padding: 0;
+	list-style-type: none;
+}
+#Portfolio li{
+	display: inline-block;
+	margin: 10px 5px;
+} 
+#Portfolio li img{
+
+	width: 240px;
+	height: 170px;
+}
+#Portfolio li img:hover{
+	cursor: pointer; /* cursor is the mouse shape */
+	/*  and the pointer is the hand shape */
+}
+#overlay{
+	display: none; /*by default don't display it when start excution*/
+	width: 100%;
+	height: 100%;
+	opacity: .7;/*shadow*/
+	background-color: black;
+	position: fixed; /*to appear the pictures under it*/
+}
+#overlay:hover{
+	cursor: pointer;
+}
+#frame{
+	display: none;
+	position: fixed;
+	background-color: white;
+	width: 700px;
+	height: 500px;
+	left: 50%;
+	margin-top: 15px;
+	margin-left: -350px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+#main{
+	width: 660px;
+	height: 440px;
+	margin-left: 20px;
+}
+#main:hover{
+	cursor: pointer;
+}
+#frame-table{
+	position: absolute;
+	width: 660px;
+	margin-left: 20px;
+}
+#right{
+	position:right;
+	left: 225px;
+}
+#right ,#left{
+	position: relative;
+	top: 150px;
+}
