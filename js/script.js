@@ -1,9 +1,22 @@
 $(function () {
 	var current_li;
+
+	//sortable is ui function 
+	$("#portfolio").sortable();
+	function setImg(src,id){
+		$("#main").attr("src",src);
+		var path ="text/"+id+".txt";
+		$.get(path ,function(data){
+			$("#description p").html(data);
+
+		});
+
+	}
 	$("#portfolio img").click(function(){
 		var src = $(this).attr("src");
+		var id =$(this).attr("id");
 		current_li = $(this).parent(); /* parent is the li contain the img */
-		$("#main").attr("src",src);
+		setImg(src,id);
 		$("#frame").fadeIn();
 		$("#overlay").fadeIn();
 
@@ -23,7 +36,8 @@ $(function () {
 			var next_li = current_li.next();
 		}
 		next_src = next_li.children("img").attr("src");
-		$("#main").attr("src",next_src);
+		id = next_li.children("img").attr("id");
+		setImg(next_src,id);
 		current_li =next_li;
 
 
@@ -36,7 +50,16 @@ $(function () {
 			var previous_li = current_li.prev();
 		}
 		previous_src = previous_li.children("img").attr("src");
-		$("#main").attr("src",previous_src);
+		id = previous_li.children("img").attr("id");
+		setImg(previous_src,id);
 		current_li =previous_li;
 	});
+
+	$("#left ,#right").mouseover(function(){
+		$(this).css("opacity",".75");
+	});
+	$("#left ,#right").mouseleave(function(){
+		$(this).css("opacity",".5");
+	});
+
 });

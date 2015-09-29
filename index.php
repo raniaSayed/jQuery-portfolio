@@ -20,20 +20,25 @@
 		</tr>
 	</table>
 	<img id="main" src="" alt="" />
+
+	<div id="description">
+		<p></p>
+	</div>
 </div>
 <div id="wrapper">
+    <ul id="filter">
+    	<li>all</li>
+        <li>nature</li>
+        <li>beauty</li>
+        <li>baby</li>
+    </ul>
 	<ul id="portfolio">
-		<li><img src="images/1.jpg" alt="img"/></li>
-		<li><img src="images/2.jpg" alt="img"/></li>
-		<li><img src="images/3.jpg" alt="img"/></li>
-		<li><img src="images/4.jpg" alt="img"/></li>
-		<li><img src="images/5.jpg" alt="img"/></li>
-		<li><img src="images/6.jpg" alt="img"/></li>
-		<li><img src="images/7.jpg" alt="img"/></li>
-		<li><img src="images/8.jpg" alt="img"/></li>
+		<?php include_once("list.html") ?>
 	</ul>
 </div>
 </body>
 <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/filter.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
 </html>

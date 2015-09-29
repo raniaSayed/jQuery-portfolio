@@ -76,7 +76,32 @@ h2{
 	position:right;
 	left: 225px;
 }
+#left img{
+	margin-left: -3px;
+}
+#right img{
+	margin-right: -5px;
+}
 #right ,#left{
 	position: relative;
-	top: 150px;
+	top: 170px;
+	opacity: .5;
+}
+#description{
+	padding: 10px;
+	text-align: center;
+	background-color: pink;
+}
+#description p{
+	font-size: 22px;
+	color: blue;
+}
+#filter li{
+	display:inline;
+
+}
+#filter li.active{
+	font-weight:bold;
+	color: red;
+	
 }
