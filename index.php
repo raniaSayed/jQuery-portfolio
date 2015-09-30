@@ -8,6 +8,7 @@
 <div id="header">
 	<div id="menu">
 		<h2>JQuery Portfolio</h2>
+		<input type="text" id="search" placeholder="Search..." style ="float:right" />
 	</div>
 </div>
 <div id="overlay"></div>

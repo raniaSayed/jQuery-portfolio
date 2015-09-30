@@ -1,8 +1,38 @@
 $(function () {
 	var current_li;
+//as keypress don't handling back space so we use keyup
+	$("#search").keyup(function(){
+		var current_query = $(this).val();
+		if(current_query!=""){
+			//hide same as fadeOut
+		$("#portfolio li").hide();
+		$("#portfolio li").each(function(){
+			var current_keyword = $(this).attr("data-keywords");
+			//current_keyword same as current_query or more than it
+			if(current_keyword.indexOf(current_query)>=0){
+				//show same as fadeIn 
+				$(this).show();
 
+			}
+			});
+
+		}
+		else{
+			$("#portfolio li").show();
+		}
+		
+
+	});
 	//sortable is ui function 
-	$("#portfolio").sortable();
+	$("#portfolio").sortable({stop: 
+		function(){
+
+			var list_content = $("#portfolio").html();
+			$.post("change.php",{list:list_content});
+
+		}
+	});
+
 	function setImg(src,id){
 		$("#main").attr("src",src);
 		var path ="text/"+id+".txt";
